@@ -1,37 +1,91 @@
 {
+    "api": {
+        "id": null,
+        "worker-id": null
+    },
     "http": {
         "enabled": false,
         "host": "0.0.0.0",
         "port": 80,
         "access-token": "2519b6c2be2d1f5358044755f0675cde01fabf6b2cb4df07ddaf37b6d131d620",
-        "restricted": false
+        "restricted": true
     },
     "autosave": true,
     "background": false,
     "colors": true,
-    "donate-level": 0,
-    "donate-over-proxy": 0,
-    "log-file": null,
+    "title": true,
+    "randomx": {
+        "init": -1,
+        "mode": "auto",
+        "1gb-pages": true,
+        "rdmsr": true,
+        "wrmsr": true,
+        "cache_qos": true,
+        "numa": true,
+        "scratchpad_prefetch_mode": 1
+    },
     "cpu": {
         "enabled": true,
         "huge-pages": true,
         "hw-aes": true,
-        "priority": true,
-        "asm": true
+        "priority": null,
+        "memory-pool": true,
+        "yield": true,
+        "asm": true,
+        "argon2-impl": null,
+        "astrobwt-max-size": 550,
+        "astrobwt-avx2": true,
+        "cn/0": true,
+        "cn-lite/0": true,
+        "rx/keva": "rx/wow"
     },
-    "opencl": true,
-    "cuda": true,
+    "opencl": {
+        "enabled": true,
+        "cache": true,
+        "loader": null,
+        "platform": "AMD",
+        "adl": true
+    },
+    "cuda": {
+        "enabled": true,
+        "loader": null,
+        "nvml": true
+    },
+    "donate-level": 0,
+    "donate-over-proxy": 0,
+    "log-file": null,
     "pools": [{
+        "algo": null,
+        "coin": null,
         "url": "xmr.pool.minergate.com:45700",
         "user": "verto1@opentree.cz",
         "pass": "",
+        "rig-id": null,
+        "nicehash": true,
         "keepalive": true,
-        "tls": false
+        "enabled": true,
+        "tls": true,
+        "tls-fingerprint": null,
+        "daemon": false,
+        "socks5": null,
+        "self-select": null
     }],
     "print-time": 60,
+    "health-print-time": 60,
     "retries": 5,
     "retry-pause": 5,
     "syslog": false,
+    "tls": {
+        "enabled": true,
+        "protocols": null,
+        "cert": null,
+        "cert_key": null,
+        "ciphers": null,
+        "ciphersuites": null,
+        "dhparam": null
+    },
     "user-agent": null,
-    "watch": true
+    "verbose": 0,
+    "watch": true,
+    "pause-on-battery": false
 }
