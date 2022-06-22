@@ -28,7 +28,7 @@ spec:
       #   effect: NoSchedule
       containers:
         - name: xmrig-cpu
-          image: "zetneteork/xmrig:latest"
+          image: "zetneteork/xmrig:6.17.0"
           # --run-as UID should match runAsUser value in containers securityContext
           command:
             - "/xmrig/xmrig"
