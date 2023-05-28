@@ -10,11 +10,17 @@ RUN \
     ./build_deps.sh && cd ../build &&\
     cmake .. -DXMRIG_DEPS=scripts/deps &&\
     make -j$(nproc) &&\
-    ldd xmrig
+    ldd xmrig &&\
+    /xmrig/build/xmrig --version &&\
+    /xmrig/build/xmrig --version | grep -i xmrig | cut -f 2 -d ' '
 
 FROM debian:stable-slim
 WORKDIR /xmrig
 COPY --from=BUILD /xmrig/build/libxmrig-asm.a /xmrig/libxmrig-asm.a
 COPY --from=BUILD /xmrig/build/xmrig /xmrig/xmrig
 COPY src/config.json /xmrig/config.json
+EXPOSE 8080
+RUN \
+    echo "PATH=/xmrig:${PATH}" >> ~/.profile &&\
+    /xmrig/xmrig --version | grep -i xmrig | cut -f 2 -d ' '
 CMD ["/xmrig/xmrig"]
