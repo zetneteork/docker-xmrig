@@ -1,0 +1,13 @@
+[Unit]
+
+Description=MSR setup for xmrig
+
+After=default.target
+
+[Service]
+
+ExecStart=/sbin/msr.sh
+
+[Install]
+
+WantedBy=default.target

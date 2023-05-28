@@ -1,0 +1,14 @@
+---
+version: "3.2"
+services:
+  xmrig:
+    image: zetneteork/xmrig:6.19.2-1
+    container_name: xmrig
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Prague
+    ports:
+      - 8080:8080
+    restart: unless-stopped
+
