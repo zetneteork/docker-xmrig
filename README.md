@@ -10,7 +10,7 @@ XMRig under Docker and Kubernetes
 ## How to run xmrig docker container
 
 ```bash
-docker run -dit --privileged --device=/dev/hugepages:/dev/hugepages zetneteork/xmrig:6.19.2-1 /xmrig/xmrig --1gb-pages --donate-level 0 --opencl --cuda -o pool.supportxmr.com:443 -u 49bMM2TDrDg3eZ7VpKYyGbFMFyZ7pq6xhh6iyNQjepaVeYCXmsHUUohGt4PKGVsGx1JBxdNoqwV7s6CEAe2AH5Yf8CnNdq3 -k --tls -p node1
+docker run -dit --privileged --device=/dev/hugepages:/dev/hugepages zetneteork/xmrig:6.21.0-1 /xmrig/xmrig --1gb-pages --donate-level 0 --opencl --cuda -o pool.supportxmr.com:443 -u 49bMM2TDrDg3eZ7VpKYyGbFMFyZ7pq6xhh6iyNQjepaVeYCXmsHUUohGt4PKGVsGx1JBxdNoqwV7s6CEAe2AH5Yf8CnNdq3 -k --tls -p node1
 ```
 
 ### Note
@@ -18,7 +18,7 @@ docker run -dit --privileged --device=/dev/hugepages:/dev/hugepages zetneteork/x
 It is necessary to add access to '/dev/hugepages' otherwise you reach low performance.
 
 ```bash
-docker run -dit --restart unless-stopped --name xmrig-manual --privileged --device=/dev/hugepages:/dev/hugepages zetneteork/xmrig:6.19.2-1 /xmrig/xmrig --1gb-pages --donate-level 0 -o pool.supportxmr.com:443 -u 49bMM2TDrDg3eZ7VpKYyGbFMFyZ7pq6xhh6iyNQjepaVeYCXmsHUUohGt4PKGVsGx1JBxdNoqwV7s6CEAe2AH5Yf8CnNdq3 -k --tls -p gemini
+docker run -dit --restart unless-stopped --name xmrig-manual --privileged --device=/dev/hugepages:/dev/hugepages zetneteork/xmrig:6.21.0-1 /xmrig/xmrig --1gb-pages --donate-level 0 -o pool.supportxmr.com:443 -u 49bMM2TDrDg3eZ7VpKYyGbFMFyZ7pq6xhh6iyNQjepaVeYCXmsHUUohGt4PKGVsGx1JBxdNoqwV7s6CEAe2AH5Yf8CnNdq3 -k --tls -p gemini
 ```
 
 
