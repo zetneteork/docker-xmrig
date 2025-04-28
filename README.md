@@ -10,7 +10,7 @@ XMRig under Docker and Kubernetes
 ## How to run xmrig docker container
 
 ```bash
-docker run -dit --privileged --device=/dev/hugepages:/dev/hugepages zetneteork/xmrig:6.22.2-1 /xmrig/xmrig --1gb-pages --donate-level 0 --opencl --cuda -o pool.supportxmr.com:443 -u 49bMM2TDrDg3eZ7VpKYyGbFMFyZ7pq6xhh6iyNQjepaVeYCXmsHUUohGt4PKGVsGx1JBxdNoqwV7s6CEAe2AH5Yf8CnNdq3 -k --tls -p node1
+docker run -dit --privileged --device=/dev/hugepages:/dev/hugepages zetneteork/xmrig:6.22.2-2 /xmrig/xmrig --1gb-pages --donate-level 0 --opencl --cuda -o pool.supportxmr.com:443 -u 49bMM2TDrDg3eZ7VpKYyGbFMFyZ7pq6xhh6iyNQjepaVeYCXmsHUUohGt4PKGVsGx1JBxdNoqwV7s6CEAe2AH5Yf8CnNdq3 -k --tls -p node1
 ```
 
 ### Note
@@ -18,7 +18,7 @@ docker run -dit --privileged --device=/dev/hugepages:/dev/hugepages zetneteork/x
 It is necessary to add access to '/dev/hugepages' otherwise you reach low performance.
 
 ```bash
-docker run -dit --restart unless-stopped --name xmrig-manual --privileged --device=/dev/hugepages:/dev/hugepages zetneteork/xmrig:6.22.2-1 /xmrig/xmrig --1gb-pages --donate-level 0 -o pool.supportxmr.com:443 -u 49bMM2TDrDg3eZ7VpKYyGbFMFyZ7pq6xhh6iyNQjepaVeYCXmsHUUohGt4PKGVsGx1JBxdNoqwV7s6CEAe2AH5Yf8CnNdq3 -k --tls -p gemini
+docker run -dit --restart unless-stopped --name xmrig-manual --privileged --device=/dev/hugepages:/dev/hugepages zetneteork/xmrig:6.22.2-2 /xmrig/xmrig --1gb-pages --donate-level 0 -o pool.supportxmr.com:443 -u 49bMM2TDrDg3eZ7VpKYyGbFMFyZ7pq6xhh6iyNQjepaVeYCXmsHUUohGt4PKGVsGx1JBxdNoqwV7s6CEAe2AH5Yf8CnNdq3 -k --tls -p gemini
 ```
 
 
@@ -40,7 +40,7 @@ sudo bash -c "echo vm.nr_hugepages=1280 >> /etc/sysctl.conf"
 ```
 
 ### Edit grub
-
+6.22.2-2
 `/etc/defaut/grub`
 
 add at end of line `GRUB_CMDLINE_LINUX_DEFAULT="`
@@ -51,7 +51,7 @@ add at end of line `GRUB_CMDLINE_LINUX_DEFAULT="`
 
 ## Enable kernel module MSR
 
-[https://xmrig.com/docs/miner/randomx-optimization-guide/msr](https://xmrig.com/docs/miner/randomx-optimization-guide/msr)
+[https://xm6.22.2-1rig.com/docs/miner/randomx-optimization-guide/msr](https://xmrig.com/docs/miner/randomx-optimization-guide/msr)
 
 Script: [https://github.com/xmrig/xmrig/blob/dev/scripts/randomx_boost.sh](https://github.com/xmrig/xmrig/blob/dev/scripts/randomx_boost.sh)
 
@@ -62,7 +62,7 @@ modprobe msr allow_writes=on
 ```
 
 Module load add in /etc/modules
-```
+```6.22.2-1
 echo "msr allow_writes=on" >> /etc/modules
 sudo update-initramfs -u
 ```
